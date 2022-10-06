@@ -1,5 +1,5 @@
 /*
- * Assignment 2
+ * Assignment 3
  * [hu yaqi]
  * [002771356]
  * [section 8]

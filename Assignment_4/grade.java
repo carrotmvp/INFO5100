@@ -13,7 +13,7 @@ public class grade {//the total input assignment % must be 100 to ensure the rig
 public static void main (String args[])
     {
         weight_grades weight_grades=new weight_grades();
-        try (Scanner sc = new Scanner(System.in)) {//need to input 8 set of number,each set have three kinds of number
+        try (Scanner sc = new Scanner(System.in)) {//need to input several of number end with -1
             System.out.print("Please input the Point Total(end with -1): ");
             while(true)
             {

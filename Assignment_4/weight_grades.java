@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-
 /*
  * Assignment 4
  * [hu yaqi]
@@ -7,6 +5,7 @@ import java.util.LinkedList;
  * [section 8]
  * class
  */
+import java.util.LinkedList;
 
 
 
@@ -16,22 +15,22 @@ public class weight_grades {
     private LinkedList<Integer> assignment= new LinkedList<Integer>();//assignment %
     private double ans=0;//answer||Total Weighted grade
 
-    public void setTpoint(int _tpoint)//set point total
+    public void setTpoint(int _tpoint)//set point total one by one
     {
         tpoint.add(_tpoint);
     }
 
-    public void setEpoint(int _epoint)//set earned ponts
+    public void setEpoint(int _epoint)//set earned ponts one by one
     {
         epoint.add(_epoint);
     }
 
-    public void set_assignment(int _assignment)//set assignment%
+    public void set_assignment(int _assignment)//set assignment% one by one
     {
         assignment.add(_assignment);
     }
 
-    public void setTpoint_togather(LinkedList<Integer> _tpoint)//set point total
+    public void setTpoint_togather(LinkedList<Integer> _tpoint)//set point total togather
     {
         for(int i=0;i<_tpoint.size();i++)
         {
@@ -39,7 +38,7 @@ public class weight_grades {
         }
     }
 
-    public void setEpoint_togather(LinkedList<Integer> _epoint)//set earned ponts
+    public void setEpoint_togather(LinkedList<Integer> _epoint)//set earned ponts togather
     {
         for(int i=0;i<_epoint.size();i++)
         {
@@ -47,7 +46,7 @@ public class weight_grades {
         }
     }
 
-    public void set_assignment_togather(LinkedList<Integer> _assignment)//set assignment%
+    public void set_assignment_togather(LinkedList<Integer> _assignment)//set assignment% togather
     {
         for(int i=0;i<_assignment.size();i++)
         {
