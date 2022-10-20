@@ -39,7 +39,8 @@ public static void main (String args[])
             weight_grades.myCaculate();//already added in this method
         }
         
-
+        System.out.print("Total Weighted point(if don't need, ignore it):");
+        System.out.println(weight_grades.getAns());
         System.out.print("Total Weighted grade:");
         System.out.print(weight_grades.getGrade());
         
