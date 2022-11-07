@@ -23,7 +23,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField; 
-public class graphical_interface {
+public class graphical_interface_read {
 
     private static int s_width=80;
     private static int gap_width=20;
@@ -59,28 +59,7 @@ public class graphical_interface {
         AnsLabel.setLineWrap(true);
         panel.add(AnsLabel);
         
-        //write to file part
-        JLabel WLabel = new JLabel("File Name:");
-        WLabel.setBounds(10+l_width+gap_width,20,s_width,m_height);
-        panel.add(WLabel);
-       
-        JTextField WText = new JTextField(20);
-        WText.setBounds(10+s_width+l_width+gap_width,20,(l_width-s_width),m_height);
-        WText.setText("example.csv");
-        panel.add(WText);
         
-        JButton Wbutton = new JButton("write into the file");
-        Wbutton.setBounds(10+l_width+gap_width, 50, l_width,m_height);
-        panel.add(Wbutton);
-
-        JLabel Label2 = new JLabel("First five lines of the new file:");
-        Label2.setBounds(10+l_width+gap_width,80,l_width,m_height);
-        panel.add(Label2);
-        
-        JTextArea showText = new JTextArea("");
-        showText.setBounds(10+l_width+gap_width,110,l_width,l_height);
-        showText.setLineWrap(true);
-        panel.add(showText);
 
         
 
@@ -113,42 +92,7 @@ public class graphical_interface {
             
         });
 
-        //Wbutton ActionListener
-        Wbutton.addActionListener(new ActionListener(){
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                showText.setText("");
-                String  Rname=WText.getText();
-                //create BufferedReader to read csv file
-                File csv = new File(Rname); // new file
-                
-                BufferedWriter bw;//new file
-                BufferedReader reader;//annual.csv
-                try {
-                    bw = new BufferedWriter(new FileWriter(csv, true));
-                    reader = new BufferedReader(new FileReader("annual.csv"));
-                    String line = null; 
-                    int num=0;//to print first five lines
-                    while((line=reader.readLine())!=null){ 
-                        String item[] = line.split(",");//seperate by ,
-                        String last = item[0]+','+item[1]+','+item[2]+'\n';
-                        bw.write(last);
-                        if(num<5){
-                            num++;
-                            showText.setText(showText.getText()+last);
-                        }
-                    }
-                    bw.close();
-                } catch (IOException e2) {
-                    showText.setText("Something wrong");
-                    e2.printStackTrace();
-                }           
-                               
-                
-            }
-            
-        });
+        
 
         
 

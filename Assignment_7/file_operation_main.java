@@ -20,7 +20,8 @@ public class file_operation_main {
         
         JPanel panel = new JPanel();    
         frame.add(panel);
-        graphical_interface.placeComponents(panel);        
+        graphical_interface_read.placeComponents(panel);        
+        graphical_interface_write.placeComponents(panel);    
         frame.setVisible(true);
     }
 
