@@ -86,6 +86,7 @@ public class Comment {
         } catch (IOException ex) {
             throw new RuntimeException(ex);
         }
+        if(commentList==null)commentList=new ArrayList<>();
         return commentList;
     }
 
